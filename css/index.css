@@ -1,0 +1,60 @@
+.content_producto{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	justify-content: space-around;
+}
+.content_producto .producto{
+	max-width: 200px;
+	min-width: 150px;
+	cursor: default;
+	color: #f5f5f5;
+	border: 2px solid #c2c2c2;
+	transition: 0.2s all ease;
+	position: relative;
+	background: #3b3c3f;
+	margin: 10px;
+}
+.content_producto .producto .titulo, .precio, .img{
+	padding: 10px;
+	font-size: 20px;
+	color: #f5f5f5;
+	text-align: center;
+}
+.content_producto .producto .content_opcions{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	display: inline-block;
+	width: 100%;
+	z-index: 10;
+	background: rgb(0,0,0,0.7);
+	animation: 0.3s mover_options ease;
+	-webkit-animation: 0.3s mover_options ease;
+	-moz-animation: 0.3s mover_options ease;
+}
+@keyframes mover_options{
+	from{
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+.content_producto .producto .content_opcions li{
+	list-style: none;
+	padding: 10px 5px 10px 5px;
+	text-align: center;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0.9;
+	transform: scale(0.97);
+	transition: 0.2s all ease;
+	margin: 10px;
+}
+.content_producto .producto .content_opcions li:hover{
+	opacity: 1;
+	border: 1px solid #c2c2c2;
+	transform: scale(1);
+}
