@@ -186,5 +186,4 @@ function actualizarProducto(id,operador=""){
 	document.getElementsByName("cantidad"+id)[0].textContent=Carrito.getCantidad(id);
 	document.getElementsByName("precio"+id)[0].textContent="$"+Carrito.totalPago(id)+" MXN";
 	document.getElementById("total").textContent="$"+Carrito.totalPago()+" MXN";
-	console.log(Carrito.carrito);
 }

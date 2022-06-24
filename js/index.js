@@ -29,6 +29,7 @@ function obtenerProductos(){
         this.template_producto.getElementById("producto").setAttribute('onmouseover',"modal('content_option"+producto.id+"')");
         this.template_producto.getElementById("producto").setAttribute('onmouseout',"modal('content_option"+producto.id+"')");
         this.template_producto.getElementById("btn_carrito").setAttribute("onclick","window.location='carrito.html?id="+producto.id+"'");
+        this.template_producto.getElementById("btn_detalles").setAttribute("onclick","window.location='carrito.html?id="+producto.id+"'");
         let clone=this.template_producto.cloneNode(true);
         this.fragment.appendChild(clone);
         switch(producto.categoria){
